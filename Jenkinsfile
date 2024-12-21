@@ -16,13 +16,13 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh "${MAVEN_HOME}/bin/mvn clean package"
+                sh "mvn clean package"
             }
         }
 
         stage('Test') {
             steps {
-                sh "${MAVEN_HOME}/bin/mvn test"
+                sh "mvn test"
             }
         }
 
