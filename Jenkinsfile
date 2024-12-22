@@ -34,7 +34,7 @@ pipeline {
 
         stage('Publish Docker Image') {
             steps {
-                withDockerRegistry([credentialsId: 'dockerhub-credentials', url: 'https://${DOCKER_REGISTRY}']) {
+                withDockerRegistry([credentialsId: '0d001dba-f6ae-4ced-bc1a-61ebecf02d63', url: 'https://app.docker.com/']) {
                     sh 'sudo docker push ${DOCKER_REGISTRY}/${DOCKER_IMAGE}:${BUILD_NUMBER}'
                 }
             }
