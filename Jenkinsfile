@@ -28,14 +28,14 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                sh 'docker build -t ${DOCKER_REGISTRY}/${DOCKER_IMAGE}:${BUILD_NUMBER} .'
+                sh 'sudo docker build -t ${DOCKER_REGISTRY}/${DOCKER_IMAGE}:${BUILD_NUMBER} .'
             }
         }
 
         stage('Publish Docker Image') {
             steps {
                 withDockerRegistry([credentialsId: 'dockerhub-credentials', url: 'https://${DOCKER_REGISTRY}']) {
-                    sh 'docker push ${DOCKER_REGISTRY}/${DOCKER_IMAGE}:${BUILD_NUMBER}'
+                    sh 'sudo docker push ${DOCKER_REGISTRY}/${DOCKER_IMAGE}:${BUILD_NUMBER}'
                 }
             }
         }
