@@ -37,7 +37,7 @@ pipeline {
                 sh './deploy.sh'
                 }
             }
-        }
+        
     }
 
     post {
