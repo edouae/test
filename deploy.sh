@@ -2,7 +2,7 @@
 
 # Variables (Customize these)
 DOCKER_USERNAME="douae196"
-DOCKER_PASSWORD="dckr_pat_iiHc5ZGWd7u-r5-M9w5FXUA8vhI"
+DOCKER_PASSWORD="dckr_pat_m8CEo1aa4YqFCb6mXdmfAj_0Lqk"
 DOCKER_IMAGE_NAME="douaeimage"
 DOCKER_IMAGE_TAG="latest"
 REMOTE_SERVER="192.168.19.130"
